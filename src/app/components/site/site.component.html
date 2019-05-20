@@ -1,0 +1,13 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <p class="title">{{ page.title }}</p>
+    </mat-panel-title>
+    <mat-panel-description>
+      <app-status
+        [statusString]="page.statusDisplay"
+        [statusState]="page.status"
+      ></app-status>
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+</mat-expansion-panel>

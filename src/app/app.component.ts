@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'
+import { Page } from './models/page'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  pages = [
+    new Page(
+      'Teem',
+      'https://status.teem.com/api/v2/',
+      'working',
+      'All Systems Operational'
+    ),
+    new Page(
+      'Slack',
+      'https://status.teem.com/api/v2/',
+      'interruption',
+      'Experiencing an Interruption'
+    ),
+    new Page('Zoom', 'https://status.teem.com/api/v2/', 'down', 'Down')
+  ]
 }

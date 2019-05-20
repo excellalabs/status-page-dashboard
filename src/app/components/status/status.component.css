@@ -1,0 +1,19 @@
+.status {
+  color: white;
+  padding: 0.3rem 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  width: 230px;
+}
+
+.working {
+  background: #2fcc66;
+}
+
+.interruption {
+  background: #f1c40f;
+}
+
+.down {
+  background: #e74c3c;
+}
