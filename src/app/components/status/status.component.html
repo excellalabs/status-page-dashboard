@@ -1,1 +1,3 @@
-<p class="{{ 'status ' + statusState }}">{{ statusString }}</p>
+<p class="{{ 'status ' + status }}">
+  {{ statusText ? statusText : getDefaultStatusText() }}
+</p>

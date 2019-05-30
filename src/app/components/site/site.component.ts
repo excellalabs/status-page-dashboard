@@ -7,11 +7,7 @@ import { Title } from '@angular/platform-browser'
   styleUrls: ['./site.component.css']
 })
 export class SiteComponent implements OnInit {
-  statusWorking = 'working'
-  statusInterruption = 'interuption'
-  statusDown = 'down'
-
-  @Input() page
+  @Input() process
   constructor() {}
 
   ngOnInit() {}

@@ -1,5 +1,7 @@
 import { Component } from '@angular/core'
-import { Page } from './models/page'
+import { IProcess } from './models/page'
+import { GetAppStatusService } from './services/get-app-status.service'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-root',
@@ -7,19 +9,8 @@ import { Page } from './models/page'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  pages = [
-    new Page(
-      'Teem',
-      'https://status.teem.com/api/v2/',
-      'working',
-      'All Systems Operational'
-    ),
-    new Page(
-      'Slack',
-      'https://status.teem.com/api/v2/',
-      'interruption',
-      'Experiencing an Interruption'
-    ),
-    new Page('Zoom', 'https://status.teem.com/api/v2/', 'down', 'Down')
-  ]
+  processes: Observable<IProcess[]>
+  constructor(processService: GetAppStatusService) {
+    this.processes = processService.get()
+  }
 }

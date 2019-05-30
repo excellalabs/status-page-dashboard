@@ -6,11 +6,11 @@
   width: 230px;
 }
 
-.working {
+.up {
   background: #2fcc66;
 }
 
-.interruption {
+.issue {
   background: #f1c40f;
 }
 
