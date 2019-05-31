@@ -46,7 +46,7 @@ export class GetAppStatusService {
       },
       {
         name: 'Zoom',
-        status: ServiceStatus.UP,
+        status: ServiceStatus.DOWN,
       },
       {
         name: 'JumpCloud',
