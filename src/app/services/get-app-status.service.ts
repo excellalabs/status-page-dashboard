@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core'
-import { HttpClient } from '@angular/common/http'
+import { IService, ServiceStatus } from '../models/service.interface'
 import { Observable, of } from 'rxjs'
-import { IProcess, Status } from '../models/page'
+
+import { Injectable } from '@angular/core'
 
 @Injectable({
   providedIn: 'root'
@@ -9,24 +9,48 @@ import { IProcess, Status } from '../models/page'
 export class GetAppStatusService {
   constructor() {}
 
-  get(): Observable<IProcess[]> {
+  get(): Observable<IService[]> {
     return of([
       {
         name: 'Teem',
-        status: Status.up,
+        status: ServiceStatus.UP,
         statusText: 'Teem is Running'
       },
       {
+        name: 'Unanet',
+        status: ServiceStatus.UP
+      },
+      {
+        name: 'UltiPro',
+        status: ServiceStatus.UP
+      },
+      {
+        name: 'Microsoft',
+        status: ServiceStatus.ISSUE,
+        statusText: 'Email is down.',
+        subProcesses: [
+          {
+            name: 'Office 365',
+            status: ServiceStatus.UP,
+          },
+          {
+            name: 'Email',
+            status: ServiceStatus.DOWN,
+            statusText: 'Email is DOWN'
+          },
+          {
+            name: 'SharePoint',
+            status: ServiceStatus.UP,
+          }
+        ]
+      },
+      {
         name: 'Zoom',
-        status: Status.up
+        status: ServiceStatus.DOWN,
       },
       {
-        name: 'Office 365',
-        status: Status.issue
-      },
-      {
-        name: 'Slack',
-        status: Status.down
+        name: 'JumpCloud',
+        status: ServiceStatus.UP,
       }
     ])
   }

@@ -1,0 +1,12 @@
+<mat-accordion *ngIf="hasCriticalProcesses$ | async">
+  <h1>Critical Processes</h1>
+  <ng-container *ngFor="let process of criticalProcesses$ | async">
+    <app-service-card [process]="process"></app-service-card>
+  </ng-container>
+</mat-accordion>
+<mat-accordion>
+  <h1>Processess</h1>
+  <ng-container *ngFor="let process of greenProcesses$ | async">
+    <app-service-card [process]="process"></app-service-card>
+  </ng-container>
+</mat-accordion>

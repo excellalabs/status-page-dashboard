@@ -1,19 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser'
-import { NgModule } from '@angular/core'
-
 import { AppComponent } from './app.component'
-import { SiteComponent } from './components/site/site.component'
-import { MatExpansionModule, MatDividerModule } from '@angular/material'
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { StatusComponent } from './components/status/status.component'
+import { BrowserModule } from '@angular/platform-browser'
+import { MaterialModule } from './mat.module';
+import { NgModule } from '@angular/core'
+import { ServiceCardComponent } from './components/service-card/service-card.component'
+import { StatusComponent } from './components/service-card/status/status.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component'
 
 @NgModule({
-  declarations: [AppComponent, SiteComponent, StatusComponent],
+  declarations: [AppComponent, ServiceCardComponent, StatusComponent, DashboardComponent],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
-    MatExpansionModule,
-    MatDividerModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
