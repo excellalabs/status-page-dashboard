@@ -1,6 +1,6 @@
 import { Component } from '@angular/core'
-import { IProcess } from './models/page'
 import { GetAppStatusService } from './services/get-app-status.service'
+import { IService } from './models/service.interface'
 import { Observable } from 'rxjs'
 
 @Component({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  processes: Observable<IProcess[]>
+  processes: Observable<IService[]>
   constructor(processService: GetAppStatusService) {
     this.processes = processService.get()
   }

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
-import { IProcess, Status } from '../../models/page';
+import { IService, ServiceStatus } from '../../models/service.interface';
 
 import { MaterialModule } from '../../mat.module';
 import { ServiceCardComponent } from './service-card.component';
@@ -20,7 +20,7 @@ describe('ServiceCardComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ServiceCardComponent);
     component = fixture.componentInstance;
-    component.process = {name: 'test service', status: Status.up} as IProcess
+    component.process = {name: 'test service', status: ServiceStatus.UP} as IService
     fixture.detectChanges();
   });
 

@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core'
 
-import { Status } from '../../../models/page'
+import { ServiceStatus } from '../../../models/service.interface'
 
 @Component({
   selector: 'app-status',
@@ -15,7 +15,7 @@ export class StatusComponent implements OnInit {
   ngOnInit() {}
 
   getDefaultStatusText(): string {
-    if (this.status === Status.up) {
+    if (this.status === ServiceStatus.UP) {
       return 'All systems functional'
     }
     return 'Issue'
