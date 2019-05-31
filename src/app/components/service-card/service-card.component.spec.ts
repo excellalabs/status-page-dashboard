@@ -3,7 +3,7 @@ import { IProcess, Status } from '../../models/page';
 
 import { MaterialModule } from '../../mat.module';
 import { ServiceCardComponent } from './service-card.component';
-import { StatusComponent } from '../status/status.component';
+import { StatusComponent } from './status/status.component';
 
 describe('ServiceCardComponent', () => {
   let component: ServiceCardComponent;

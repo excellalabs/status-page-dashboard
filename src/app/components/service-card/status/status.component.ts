@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core'
-import { Status } from '../../models/page'
+import { Component, Input, OnInit } from '@angular/core'
+
+import { Status } from '../../../models/page'
 
 @Component({
   selector: 'app-status',

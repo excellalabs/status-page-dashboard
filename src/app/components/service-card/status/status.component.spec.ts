@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
-import { MaterialModule } from '../../mat.module';
+import { MaterialModule } from '../../../mat.module';
 import { StatusComponent } from './status.component';
 
 describe('StatusComponent', () => {
