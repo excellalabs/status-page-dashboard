@@ -17,16 +17,40 @@ export class GetAppStatusService {
         statusText: 'Teem is Running'
       },
       {
-        name: 'Zoom',
+        name: 'Unanet',
         status: ServiceStatus.UP
       },
       {
-        name: 'Office 365',
-        status: ServiceStatus.ISSUE
+        name: 'UltiPro',
+        status: ServiceStatus.UP
       },
       {
-        name: 'Slack',
-        status: ServiceStatus.DOWN
+        name: 'Microsoft',
+        status: ServiceStatus.ISSUE,
+        statusText: 'Email is down.',
+        subProcesses: [
+          {
+            name: 'Office 365',
+            status: ServiceStatus.UP,
+          },
+          {
+            name: 'Email',
+            status: ServiceStatus.DOWN,
+            statusText: 'Email is DOWN'
+          },
+          {
+            name: 'SharePoint',
+            status: ServiceStatus.UP,
+          }
+        ]
+      },
+      {
+        name: 'Zoom',
+        status: ServiceStatus.UP,
+      },
+      {
+        name: 'JumpCloud',
+        status: ServiceStatus.UP,
       }
     ])
   }

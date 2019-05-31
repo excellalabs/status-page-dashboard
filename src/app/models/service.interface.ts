@@ -3,7 +3,7 @@ export interface IService {
   status: string
   statusText?: string
   timeStamp?: string
-  subProcess?: Array<IService>
+  subProcesses?: Array<IService>
 }
 
 export enum ServiceStatus {
