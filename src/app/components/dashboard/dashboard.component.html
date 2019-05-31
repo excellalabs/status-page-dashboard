@@ -1,3 +1,5 @@
-<p>
-  dashboard works!
-</p>
+<mat-accordion>
+  <ng-container *ngFor="let process of processes | async">
+    <app-service-card [process]="process"></app-service-card>
+  </ng-container>
+</mat-accordion>
