@@ -11,28 +11,22 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  criticalProcesses$: Observable<IService[]>
-  hasCriticalProcesses$: Observable<boolean>
-
-  greenProcesses$: Observable<IService[]>
+  services$: Observable<IService[]>
 
   constructor(private processService: GetAppStatusService) {}
 
   ngOnInit() {
-    this.criticalProcesses$ = this.processService.get()
-      .pipe(map((serviceList: IService[]) =>
-        serviceList.filter(s => s.status !== ServiceStatus.UP)
-          .sort((a, b) => a.name.localeCompare(b.name))
-      ));
-    this.hasCriticalProcesses$ = this.criticalProcesses$.pipe(
-      map(processes => processes ? processes.length > 0 : false)
-    );
+    this.services$ = this.processService.get()
+      .pipe(map((serviceList: IService[]) => serviceList.sort(this.compareStatus)));
+  }
 
-    this.greenProcesses$ = this.processService.get()
-      .pipe(map((serviceList: IService[]) =>
-        serviceList.filter(s => s.status === ServiceStatus.UP)
-          .sort((a, b) => a.name.localeCompare(b.name))
-      ));
+  compareStatus(a: IService, b: IService): number {
+    if (a === b) { return a.name.localeCompare(b.name) }
+    if (a.status === ServiceStatus.UP) { return 1; }
+    if (a.status === ServiceStatus.ISSUE && b.status === ServiceStatus.DOWN) {
+      return 1;
+    }
+    return -1;
   }
 
 }

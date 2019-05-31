@@ -50,7 +50,7 @@ export class GetAppStatusService {
       },
       {
         name: 'JumpCloud',
-        status: ServiceStatus.UP,
+        status: ServiceStatus.ISSUE,
       }
     ])
   }
