@@ -1,15 +1,6 @@
-<div *ngIf="hasCriticalProcesses$ | async">
-  <h1>Critical Processes</h1>
-  <hr>
-  <div *ngFor="let process of criticalProcesses$ | async">
-    <app-service-card [process]="process"></app-service-card>
-    <mat-divider></mat-divider>
-  </div>
-</div>
 <mat-accordion>
-  <h1>Processess</h1>
-  <mat-divider></mat-divider>
-  <ng-container *ngFor="let process of greenProcesses$ | async">
+  <h1>Services</h1>
+  <ng-container *ngFor="let process of services$ | async">
     <app-service-card [process]="process"></app-service-card>
   </ng-container>
 </mat-accordion>
