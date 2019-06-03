@@ -5,7 +5,10 @@ import { Component } from '@angular/core'
   template: `
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
-  <h1 class="temp-title">Excella</h1>
+  <div class="top">
+    <img src="../assets/excellaLogo.png" alt="Excella" height="35" width="150">
+  </div>
+
   <app-dashboard class="content"></app-dashboard>
   `,
   styleUrls: ['app.component.scss']
