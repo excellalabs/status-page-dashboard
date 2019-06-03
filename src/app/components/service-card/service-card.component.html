@@ -1,19 +1,4 @@
-<h4>{{process.name}}</h4>
-<app-status [status]="process.status" [statusText]="process.statusText"></app-status>
-<hr>
-
-<!-- 
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      <p class="title">{{ process.name }}</p>
-    </mat-panel-title>
-    <mat-panel-description>
-      <app-status
-        [status]="process.status"
-        [statusText]="process.statusText"
-      ></app-status>
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-</mat-expansion-panel> 
--->
+<div class="item {{process.status}}">
+  <span>{{process.name}} - <app-status class="text" [status]="process.status" [statusText]="process.statusText"></app-status>
+  </span>
+</div>

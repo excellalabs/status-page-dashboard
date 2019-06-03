@@ -5,8 +5,8 @@ import { Component } from '@angular/core'
   template: `
   <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
 
-  <h1>Excella</h1>
-  <app-dashboard class="body"></app-dashboard>
+  <h1 class="temp-title">Excella</h1>
+  <app-dashboard class="content"></app-dashboard>
   `,
   styleUrls: ['app.component.scss']
 })
