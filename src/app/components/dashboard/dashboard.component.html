@@ -1,6 +1,8 @@
-<mat-accordion>
+<div class="content">
   <h1>Services</h1>
-  <ng-container *ngFor="let process of services$ | async">
-    <app-service-card [process]="process"></app-service-card>
+  <ng-container *ngFor="let process of services$ | async; last as isLast">
+    <div [ngClass]="{ 'serviceCard' : !isLast, 'lastCard' : isLast }">
+      <app-service-card [process]="process"></app-service-card>
+    </div>
   </ng-container>
-</mat-accordion>
+</div>
