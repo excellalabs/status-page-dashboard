@@ -1,0 +1,23 @@
+<div>
+  {{ service.name }}
+</div>
+<div>
+  <mat-radio-group [(ngModel)]="service.status">
+    <mat-radio-button *ngFor="let status of statuses" [value]="status">
+      {{ status }}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+<div>
+  <mat-form-field>
+    <input
+      matInput
+      placeholder="Status Message"
+      [(ngModel)]="service.statusText"
+    />
+  </mat-form-field>
+</div>
+<div>
+  <button mat-raised-button color="primary" (click)="save()">Save</button>
+  <button mat-raised-button color="secondary" (click)="cancel()">Cancel</button>
+</div>

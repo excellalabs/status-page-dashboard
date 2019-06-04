@@ -1,4 +1,14 @@
-<div class="item {{process.status}}">
-  <span>{{process.name}} - <app-status [status]="process.status" [statusText]="process.statusText"></app-status>
+<div class="item {{ service.status }}">
+  <span
+    >{{ service.name }} -
+    <app-status
+      [status]="service.status"
+      [statusText]="service.statusText"
+    ></app-status>
   </span>
+  <div *ngIf="isManualUpdate()">
+    <button mat-raised-button color="primary" (click)="openDialog()">
+      Edit
+    </button>
+  </div>
 </div>
