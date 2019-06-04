@@ -1,14 +1,24 @@
-import { MatDividerModule, MatExpansionModule } from '@angular/material'
+import {
+  MatDividerModule,
+  MatExpansionModule,
+  MatDialogModule,
+  MatButtonModule,
+  MatInputModule,
+  MatRadioModule
+} from '@angular/material'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core'
 
 const materialModules = [
-    BrowserAnimationsModule,
-    MatExpansionModule,
-    MatDividerModule
-  ];
-
+  BrowserAnimationsModule,
+  MatExpansionModule,
+  MatDividerModule,
+  MatDialogModule,
+  MatButtonModule,
+  MatRadioModule,
+  MatInputModule
+]
 
 @NgModule({
   imports: materialModules,

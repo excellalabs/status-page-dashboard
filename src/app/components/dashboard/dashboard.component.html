@@ -1,8 +1,8 @@
 <div class="content">
   <h1>Services</h1>
-  <ng-container *ngFor="let process of services$ | async; last as isLast">
-    <div [ngClass]="{ 'serviceCard' : !isLast, 'lastCard' : isLast }">
-      <app-service-card [process]="process"></app-service-card>
+  <ng-container *ngFor="let service of services$ | async; last as isLast">
+    <div [ngClass]="{ serviceCard: !isLast, lastCard: isLast }">
+      <app-service-card [service]="service"></app-service-card>
     </div>
   </ng-container>
 </div>
