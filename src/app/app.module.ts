@@ -5,8 +5,11 @@ import { NgModule } from '@angular/core'
 import { ServiceCardComponent } from './components/service-card/service-card.component'
 import { StatusComponent } from './components/service-card/status/status.component'
 import { DashboardComponent } from './components/dashboard/dashboard.component'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { ManualUpdateModalComponent } from './components/manual-update-modal/manual-update-modal.component'
+import { LoginComponent } from './components/login/login.component'
+import { AppRoutingModule } from './app-routing.module'
+import { LoginService } from './services/login.service'
 
 @NgModule({
   entryComponents: [ManualUpdateModalComponent],
@@ -15,10 +18,17 @@ import { ManualUpdateModalComponent } from './components/manual-update-modal/man
     ServiceCardComponent,
     StatusComponent,
     DashboardComponent,
-    ManualUpdateModalComponent
+    ManualUpdateModalComponent,
+    LoginComponent
   ],
-  imports: [BrowserModule, MaterialModule, FormsModule],
-  providers: [],
+  imports: [
+    BrowserModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppRoutingModule
+  ],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
