@@ -10,6 +10,8 @@ import { ManualUpdateModalComponent } from './components/manual-update-modal/man
 import { LoginComponent } from './components/login/login.component'
 import { AppRoutingModule } from './app-routing.module'
 import { LoginService } from './services/login.service'
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
+import { TokenInterceptor } from './auth/token.interceptor'
 
 @NgModule({
   entryComponents: [ManualUpdateModalComponent],
@@ -26,9 +28,17 @@ import { LoginService } from './services/login.service'
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [LoginService],
+  providers: [
+    LoginService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
