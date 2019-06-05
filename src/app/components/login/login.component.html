@@ -1,0 +1,10 @@
+<form [formGroup]="formGroup">
+  <h2>Login</h2>
+  <mat-form-field [formControlName]="username">
+    <textarea matInput placeholder="Username"></textarea>
+  </mat-form-field>
+  <mat-form-field [formControlName]="password">
+    <textarea matInput placeholder="Password"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary">Submit</button>
+</form>
