@@ -1,0 +1,22 @@
+$background: rgb(223, 223, 223);
+
+.content{
+    text-align:center;
+    margin-left:30%;
+    margin-right:30%;
+    padding:1rem 2rem 3rem 1rem;
+    background: $background;
+    border-radius:4px;
+    color:#1f1f1f;
+}
+
+mat-form-field {
+    width:70%;
+    margin: 0.5rem 2rem;
+}
+
+button{
+    margin-top:2rem;
+    width:80%;
+}
+
