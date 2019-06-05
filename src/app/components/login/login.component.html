@@ -1,10 +1,10 @@
-<form [formGroup]="formGroup">
+<form [formGroup]="formGroup" (ngSubmit)="submit()">
   <h2>Login</h2>
-  <mat-form-field [formControlName]="username">
-    <textarea matInput placeholder="Username"></textarea>
+  <mat-form-field>
+    <input matInput placeholder="Username" formControlName="username" />
   </mat-form-field>
-  <mat-form-field [formControlName]="password">
-    <textarea matInput placeholder="Password"></textarea>
+  <mat-form-field>
+    <input matInput placeholder="Password" formControlName="password" />
   </mat-form-field>
-  <button mat-raised-button color="primary">Submit</button>
+  <button mat-raised-button color="primary" type="submit">Submit</button>
 </form>
