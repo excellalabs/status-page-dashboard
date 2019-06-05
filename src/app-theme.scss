@@ -7,18 +7,14 @@
 // Define your application's custom theme.
 $primary: mat-palette($mat-blue-grey, 600);
 $accent:  mat-palette($mat-blue, 100);
-$light-dashboard-theme: mat-dark-theme($primary, $accent);
+$dark-dashboard-theme: mat-dark-theme($primary, $accent);
 
 // Include theme styles for Angular Material components.
-@include angular-material-theme($light-dashboard-theme);
+@include angular-material-theme($dark-dashboard-theme);
 
-// Our dark theme
-.dark-dashboard-theme {
-    //color: $light-primary-text;
-    $dark-primary: mat-palette($mat-yellow);
-    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
-    $dark-warn: mat-palette($mat-red);
-    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+.light-dashboard-theme {
+    $light-primary: mat-palette($mat-blue);
+    $light-dashboard-theme: mat-light-theme($primary, $accent);
 
-    @include angular-material-theme($dark-theme);
+    @include angular-material-theme($light-dashboard-theme);
 }
