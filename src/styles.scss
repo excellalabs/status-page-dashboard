@@ -1,12 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+
+@import 'app-theme.scss';
+
+// specify theme class eg: <body class="my-theme"> ... </body>
+.dashboard-theme {
+  // use our theme with angular-material-theme mixin
+  @include angular-material-theme($light-dashboard-theme);
+  //@include dashboard-component-theme($dashboard-theme);
+}
 
 body {
   font-family: 'Muli', sans-serif;
   font-style: normal;
   font-weight: 200;
   font-size: 16px;
-  color:#f5f5f5;
+  margin:none;
+  //color:#f5f5f5;
   line-height: 24px;
-  background: #1f1f1f;
+  //background: #1f1f1f;
 }

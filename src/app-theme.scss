@@ -1,0 +1,24 @@
+// Import library functions for theme creation.
+@import '~@angular/material/theming';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define your application's custom theme.
+$primary: mat-palette($mat-blue-grey, 600);
+$accent:  mat-palette($mat-blue, 100);
+$light-dashboard-theme: mat-dark-theme($primary, $accent);
+
+// Include theme styles for Angular Material components.
+@include angular-material-theme($light-dashboard-theme);
+
+// Our dark theme
+.dark-dashboard-theme {
+    //color: $light-primary-text;
+    $dark-primary: mat-palette($mat-yellow);
+    $dark-accent: mat-palette($mat-amber, A400, A100, A700);
+    $dark-warn: mat-palette($mat-red);
+    $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+    @include angular-material-theme($dark-theme);
+}
