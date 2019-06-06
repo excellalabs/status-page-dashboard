@@ -9,12 +9,12 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
 
-  isLightTheme: Observable<boolean>;
+  isLightTheme$: Observable<boolean>;
 
   constructor(private themeService: ThemeService) { }
 
   ngOnInit() {
-    this.isLightTheme = this.themeService.isLightTheme;
+    this.isLightTheme$ = this.themeService.isLightTheme$;
   }
 
   toggleLightTheme(checked: boolean) {

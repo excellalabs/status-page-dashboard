@@ -1,8 +1,8 @@
-<div [ngClass]="{'light-dashboard-theme': isLightTheme | async}" class="backdrop">
+<div [ngClass]="{'light-dashboard-theme': isLightTheme$ | async}" class="backdrop">
     <div class="mat-app-background backdrop">
         <mat-toolbar color="primary-dark">
             <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
-                <div *ngIf="isLightTheme | async; else darkTheme">
+                <div *ngIf="isLightTheme$ | async; else darkTheme">
                     <img src="../assets/excellaLogoBlack.png" alt="Excella" height="35" width="150">
                 </div>
                 <ng-template #darkTheme>
@@ -10,7 +10,7 @@
                         <img src="../assets/excellaLogo.png" alt="Excella" height="35" width="150">
                     </span>
                 </ng-template>
-                <mat-slide-toggle [checked]="isLightTheme | async" (change)="toggleLightTheme($event.checked)">light theme</mat-slide-toggle>
+                <mat-slide-toggle [checked]="isLightTheme$ | async" (change)="toggleLightTheme($event.checked)">light theme</mat-slide-toggle>
             </mat-toolbar-row>
         </mat-toolbar>
         <router-outlet></router-outlet> 
