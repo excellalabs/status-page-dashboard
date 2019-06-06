@@ -6,7 +6,8 @@ import {
   MatInputModule,
   MatRadioModule,
   MatToolbarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatButtonToggleModule
 } from '@angular/material'
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
@@ -21,7 +22,8 @@ const materialModules = [
   MatRadioModule,
   MatInputModule,
   MatToolbarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatButtonToggleModule
 ]
 
 @NgModule({

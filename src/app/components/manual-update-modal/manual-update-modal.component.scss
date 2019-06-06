@@ -10,10 +10,26 @@ mat-radio-button {
 
 mat-form-field{
   width:100%;
+  margin-bottom:1.5rem;
+}
+mat-button-toggle-group{
+  margin-bottom:1rem;
+  mat-button-toggle{
+    width:5rem;
+  }
+}
+
+p{
+  margin-bottom:0.5rem;
+}
+
+label{
+  margin-bottom:1rem;
 }
 
 .title {
-  font-size:20px;
+  font-size:22px;
+  margin-bottom:3rem;
 }
 
 .mat-raised-button{
