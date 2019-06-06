@@ -1,14 +1,11 @@
-<div class="item {{ service.status }}">
-  <span
-    >{{ service.name }} -
-    <app-status
-      [status]="service.status"
-      [statusText]="service.statusText"
-    ></app-status>
+<div class="item {{ service.status }}" fxLayout="row" fxLayoutAlign="space-between center">
+  <span class="text" fxFlex>
+    {{ service.name }} - 
+    <app-status [status]="service.status" [statusText]="service.statusText" ></app-status>
   </span>
-  <div *ngIf="isManualUpdate()">
+  <span *ngIf="isManualUpdate()" fxFlex="20" fxLayoutAlign="end end">
     <button mat-raised-button color="primary" (click)="openDialog()">
       Edit
     </button>
-  </div>
+  </span>
 </div>

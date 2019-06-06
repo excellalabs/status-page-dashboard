@@ -1,3 +1,9 @@
-.temp-title{
-    margin-top:0;
+@import "../app-theme.scss";
+
+.backdrop{
+    height:100%;
+}
+
+mat-slide-toggle{
+    font-size:14px;
 }

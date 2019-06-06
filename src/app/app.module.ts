@@ -12,6 +12,9 @@ import { AppRoutingModule } from './app-routing.module'
 import { LoginService } from './services/login.service'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { TokenInterceptor } from './auth/token.interceptor'
+import { FlexLayoutModule } from '@angular/flex-layout'
+import { ThemeService } from './services/theme.service';
+
 
 @NgModule({
   entryComponents: [ManualUpdateModalComponent],
@@ -29,7 +32,8 @@ import { TokenInterceptor } from './auth/token.interceptor'
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FlexLayoutModule
   ],
   providers: [
     LoginService,
@@ -37,7 +41,8 @@ import { TokenInterceptor } from './auth/token.interceptor'
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+    },
+    ThemeService
   ],
   bootstrap: [AppComponent]
 })

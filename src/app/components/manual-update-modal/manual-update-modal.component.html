@@ -1,12 +1,13 @@
-<div>
+<div class="title">
   {{ service.name }}
 </div>
+<p>Status</p>
 <div>
-  <mat-radio-group [(ngModel)]="service.status">
-    <mat-radio-button *ngFor="let status of statuses" [value]="status">
+  <mat-button-toggle-group [(ngModel)]="service.status">
+    <mat-button-toggle *ngFor="let status of statuses" [value]="status">
       {{ status }}
-    </mat-radio-button>
-  </mat-radio-group>
+    </mat-button-toggle>
+  </mat-button-toggle-group>
 </div>
 <div>
   <mat-form-field>
