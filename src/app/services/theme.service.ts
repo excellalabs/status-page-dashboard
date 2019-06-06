@@ -6,7 +6,7 @@ export class ThemeService {
   private _lightTheme: Subject<boolean> = new Subject<boolean>();
   isLightTheme = this._lightTheme.asObservable();
 
-  setDarkTheme(isLightTheme: boolean) {
+  setLightTheme(isLightTheme: boolean) {
     this._lightTheme.next(isLightTheme);
   }
 }

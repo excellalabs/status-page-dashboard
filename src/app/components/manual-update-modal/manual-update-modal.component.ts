@@ -5,7 +5,7 @@ import { ServiceStatus, IService } from '../../models/service.interface'
 @Component({
   selector: 'app-manual-update-modal',
   templateUrl: './manual-update-modal.component.html',
-  styleUrls: ['./manual-update-modal.component.css']
+  styleUrls: ['./manual-update-modal.component.scss']
 })
 export class ManualUpdateModalComponent {
   statuses: Array<string>

@@ -13,6 +13,7 @@ import { LoginService } from './services/login.service'
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { TokenInterceptor } from './auth/token.interceptor'
 import { FlexLayoutModule } from '@angular/flex-layout'
+import { ThemeService } from './services/theme.service';
 
 
 @NgModule({
@@ -32,7 +33,7 @@ import { FlexLayoutModule } from '@angular/flex-layout'
     ReactiveFormsModule,
     AppRoutingModule,
     HttpClientModule,
-    FlexLayoutModule 
+    FlexLayoutModule
   ],
   providers: [
     LoginService,
@@ -40,7 +41,8 @@ import { FlexLayoutModule } from '@angular/flex-layout'
       provide: HTTP_INTERCEPTORS,
       useClass: TokenInterceptor,
       multi: true
-    }
+    },
+    ThemeService
   ],
   bootstrap: [AppComponent]
 })
