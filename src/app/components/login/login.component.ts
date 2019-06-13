@@ -28,8 +28,4 @@ export class LoginComponent implements OnInit {
       this.formGroup.get('password').value
     )
   }
-
-  logout() {
-    this.loginService.logout()
-  }
 }

@@ -10,7 +10,12 @@
                         <img src="../assets/excellaLogo.png" alt="Excella" height="35" width="150">
                     </span>
                 </ng-template>
-                <mat-slide-toggle [checked]="isLightTheme$ | async" (change)="toggleLightTheme($event.checked)">light theme</mat-slide-toggle>
+                <div class="slider">
+                    <span class="dark">dark theme</span>
+                    <mat-slide-toggle [checked]="isLightTheme$ | async" (change)="toggleLightTheme($event.checked)"></mat-slide-toggle>
+                    <span class="light">light theme</span>
+                </div>
+                <div class="logout-button" (click)="logout()">Logout</div>
             </mat-toolbar-row>
         </mat-toolbar>
         <router-outlet></router-outlet> 

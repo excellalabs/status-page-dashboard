@@ -18,3 +18,5 @@ $dark-dashboard-theme: mat-dark-theme($primary, $accent);
 
     @include angular-material-theme($light-dashboard-theme);
 }
+
+$font-fam:'Muli', sans-serif;

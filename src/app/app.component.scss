@@ -4,6 +4,23 @@
     height:100%;
 }
 
-mat-slide-toggle{
-    font-size:14px;
+
+.slider{
+    font-family: $font-fam;
+    font-size: 14px;
+    .dark{
+        color:#212121;
+        margin-right:1rem;
+    }
+    .light{
+        color:#f5f5f5;
+        margin-left:1rem;
+    }
+}
+
+.logout-button{
+    font-size:16px;
+    cursor:pointer;
+    color:#e33e47;
+    font-family: $font-fam;
 }
