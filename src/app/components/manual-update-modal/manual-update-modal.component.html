@@ -1,6 +1,12 @@
 <div class="title">
   {{ service.name }}
 </div>
+<p>Update Method</p>
+<div>
+  <mat-radio-group [(ngModel)]="service.updateMethod">
+    <mat-radio-button *ngFor="let method of updateMethods" [value]="method"> {{ method | titlecase }}</mat-radio-button>
+  </mat-radio-group>
+</div>
 <p>Status</p>
 <div>
   <mat-button-toggle-group [(ngModel)]="service.status">
