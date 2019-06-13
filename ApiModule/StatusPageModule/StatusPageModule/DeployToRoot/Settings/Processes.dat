@@ -1,0 +1,65 @@
+[{  
+   "Name": "Teem",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Unanet",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Ultipro",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Sharepoint",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Email",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "365",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Jumpcloud",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+},{  
+   "Name": "Zoom",
+   "Status": "Up",
+   "StatusText": "Working",
+   "LastUpdate": "06/12/2019",
+   "SubProcess": [],
+   "IsManual": 1,
+   "IsAutomaicAvail": 0
+}]

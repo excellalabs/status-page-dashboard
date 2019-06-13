@@ -40,3 +40,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+ApiModule/StatusPageModule/.vs/
+ApiModule/StatusPageModule/StatusPageModule/obj/
+ApiModule/StatusPageModule/StatusPageModule/bin/
+ApiModule/StatusPageModule/ApiCommon/obj/
+ApiModule/StatusPageModule/ApiCommon/bin/
