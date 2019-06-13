@@ -8,4 +8,7 @@
       Edit
     </button>
   </span>
+  <span *ngIf="!isManualUpdate()" fxFlex="20" fxLayoutAlign="end end">
+    <span class="show-auto" (click)="openDialog()">Automatic</span>
+  </span>
 </div>

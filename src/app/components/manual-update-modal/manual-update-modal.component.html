@@ -1,17 +1,24 @@
 <div class="title">
   {{ service.name }}
 </div>
+<p>Update Method</p>
+<div>
+  <mat-radio-group [(ngModel)]="service.updateMethod">
+    <mat-radio-button *ngFor="let method of updateMethods" [value]="method"> {{ method | titlecase }}</mat-radio-button>
+  </mat-radio-group>
+</div>
 <p>Status</p>
 <div>
-  <mat-button-toggle-group [(ngModel)]="service.status">
+  <mat-button-toggle-group [(ngModel)]="service.status" disabled="{{(service.updateMethod | lowercase) === 'automatic'}}">
     <mat-button-toggle *ngFor="let status of statuses" [value]="status">
       {{ status }}
     </mat-button-toggle>
   </mat-button-toggle-group>
 </div>
 <div>
-  <mat-form-field>
+  <mat-form-field >
     <input
+      disabled="{{(service.updateMethod | lowercase) === 'automatic'}}"
       matInput
       placeholder="Status Message"
       [(ngModel)]="service.statusText"
