@@ -1,8 +1,5 @@
-$break-mobile: 480px;
-$break-small:700px;
-$break-mid:900px;
-$break-large: 1280px;
-$break-xl: 1520px;
+@import '../../../app-theme.scss';
+
 
 h1{
     padding-bottom:0.5rem;
