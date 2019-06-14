@@ -15,7 +15,12 @@
         </mat-toolbar>
         <router-outlet></router-outlet> 
     </div>
-    <div class="footer"> 
-        <p>Version {{ getVersion() }}</p>
+    <div *ngIf="isLightTheme$ | async; else darkVersion" class="footer"> 
+        <p>Version {{ getVersion() }}<p>
     </div>
+    <ng-template #darkVersion>
+        <div class="footer"> 
+            <p style="color: white">Version {{ getVersion() }}<p>
+        </div>
+    </ng-template>
 </div>
