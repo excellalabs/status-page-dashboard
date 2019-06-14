@@ -20,3 +20,10 @@ $dark-dashboard-theme: mat-dark-theme($primary, $accent);
 }
 
 $font-fam:'Muli', sans-serif;
+
+//Media Breaks
+$break-mobile: 480px;
+$break-small:700px;
+$break-mid:900px;
+$break-large: 1280px;
+$break-xl: 1520px;
