@@ -1,4 +1,4 @@
-<div class="item {{ service.status }}" fxLayout="row" fxLayoutAlign="space-between center">
+<div class="item {{ service.status }}" [ngClass]="{'light':isLightTheme$}" fxLayout="row" fxLayoutAlign="space-between center">
   <span class="text" fxFlex>
     {{ service.name }} - 
     <app-status [status]="service.status" [statusText]="service.statusText" ></app-status>
