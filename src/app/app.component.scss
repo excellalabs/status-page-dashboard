@@ -4,10 +4,6 @@
     height:100%;
 }
 
-mat-slide-toggle{
-    font-size:14px;
-}
-
 .footer{
     position: fixed;
     left: 0;
@@ -15,6 +11,43 @@ mat-slide-toggle{
     width: 100%;
     text-align: right;
     margin-top: -50px;
+<<<<<<< HEAD
     font-size: 14px;
     margin: -10px;
+=======
+}
+
+.slider{
+    font-family: $font-fam;
+    font-size: 14px;
+
+    .dark{
+        color:#212121;
+        margin-right:1rem;
+        &::before{
+            content:"dark mode";
+            @media all and (max-width: $break-small) {
+                content:"";
+                margin-left: 3rem;
+            }
+        }
+    }
+    .light{
+        color:#f5f5f5;
+        margin-left:1rem;
+        &::after{
+            content:"light mode";
+            @media all and (max-width: $break-small) {
+                content:"";
+            }
+        }
+    }
+}
+
+.logout-button{
+    font-size:16px;
+    cursor:pointer;
+    color:#e33e47;
+    font-family: $font-fam;
+>>>>>>> 55d361138c1509cfaf9660405b770c48fc18c605
 }

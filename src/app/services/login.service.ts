@@ -25,6 +25,7 @@ export class LoginService {
 
   logout() {
     localStorage.removeItem(this.key)
+    this.router.navigateByUrl('/login')
   }
 
   isLoggedIn() {

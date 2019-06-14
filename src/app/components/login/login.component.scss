@@ -1,23 +1,51 @@
+@import '../../../app-theme.scss';
+
 $background: rgb(223, 223, 223);
 
 .content{
     text-align:center;
+    margin-top:3rem;
     margin-left:30%;
     margin-right:30%;
-    margin-top:3rem;
     padding:1rem 2rem 3rem 1rem;
-    background: $background;
-    border-radius:4px;
-    color:#1f1f1f;
+
+    @media all and (max-width: $break-small) {
+        margin-left:4%;
+        margin-right:4%;
+    }  
+    @media all and (max-width: $break-small) {
+        margin-left:10%;
+        margin-right:10%;
+    }
+    @media all and (min-width: $break-small) {
+        margin-left:15%;
+        margin-right:15%;
+    }
+    @media all and (min-width: $break-mid) {
+        margin-left:20%;
+        margin-right:20%;
+    }
+    @media all and (min-width: $break-large) {
+        margin-left:25%;
+        margin-right:25%;
+    }
+    @media all and (min-width: $break-xl) {
+        margin-left:30%;
+        margin-right:30%;
+    }
 }
 
 mat-form-field {
     width:70%;
     margin: 0.5rem 2rem;
+    @media all and (max-width: $break-small) {
+        width:90%;
+        margin: 0.5px 0;
+    }
 }
 
 button{
     margin-top:2rem;
-    width:80%;
+    width:40%;
 }
 
