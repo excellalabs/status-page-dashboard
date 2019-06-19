@@ -9,4 +9,8 @@ export class ThemeService {
   setLightTheme(isLightTheme$: boolean) {
     this._lightTheme.next(isLightTheme$);
   }
+
+  getTheme() {
+    return this.isLightTheme$;
+  }
 }
